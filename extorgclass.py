@@ -83,10 +83,10 @@ class ExtOrg:
             'orgtype':self.orgtype}, ignore_index=True)
 
         if self.system == 'SIS':
-            self.df.to_csv(r'C:\Users\Beth\PycharmProjects\ExtOrgMathingFromHome\Files\\siscleanedorgs.csv',
+            self.df.to_csv(r'C:\Users\Beth\PycharmProjects\ExtOrgMatchingFromHome\files\siscleanedorgs.csv',
                        mode='a',index=False, header=False)
         else:
-            self.df.to_csv(r'C:\Users\Beth\PycharmProjects\ExtOrgMathingFromHome\Files\lcleanedorgs.csv',
+            self.df.to_csv(r'C:\Users\Beth\PycharmProjects\ExtOrgMatchingFromHome\files\lcleanedorgs.csv',
                            mode='a', index=False, header=False)
 
 
