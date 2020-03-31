@@ -1,4 +1,4 @@
-from dept import Department, ExtOrg
+from extorgclass import Department, ExtOrg
 import sqlalchemy
 import oraclecon as con
 import pandas as pd
