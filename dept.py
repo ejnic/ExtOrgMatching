@@ -83,45 +83,11 @@ class ExtOrg:
             'orgtype':self.orgtype}, ignore_index=True)
 
         if self.system == 'SIS':
-            self.df.to_csv(r'C:\Users\ejnic\Google Drive Personal\Python\ClassesAndObjectsTutorial\siscleanedorgs.csv',
+            self.df.to_csv(r'C:\Users\Beth\PycharmProjects\ExtOrgMathingFromHome\Files\\siscleanedorgs.csv',
                        mode='a',index=False, header=False)
         else:
-            self.df.to_csv(r'C:\Users\ejnic\Google Drive Personal\Python\ClassesAndObjectsTutorial\lcleanedorgs.csv',
+            self.df.to_csv(r'C:\Users\Beth\PycharmProjects\ExtOrgMathingFromHome\Files\lcleanedorgs.csv',
                            mode='a', index=False, header=False)
-
-        #['orgname', 'country', 'system', 'cleanedname', 'originalname', 'orgtype']
-
-        #self.orgtype = self.orgtype + 'UNIVERSITY' if self.cleanedname.str.contains(r'UNIV')
-'''
-        self.df.loc[self.df['orgname'].str.contains(r'COLL'), 'orgtype'] = 'COLLEGE'
-        self.df['orgname'] = self.df['orgname'].str.replace("COLLEGE", "")
-        self.df.loc[self.df['orgname'].str.contains(r'SCHOOL'), 'orgtype'] = 'SCHOOL'
-        self.df['orgname'] = self.df['orgname'].str.replace("\sSCHOOL", "")
-        self.df.loc[self.df['orgname'].str.contains(r'INSTITUTE'), 'orgtype'] = 'INSTITUTE'
-        self.df['orgname'] = self.df['orgname'].str.replace('INSTITUTE', '')
-        self.df.loc[self.df['orgname'].str.contains(r'ACADEMY'), 'orgtype'] = 'ACADEMY'
-        self.df['orgname'] = self.df['orgname'].str.replace('ACADEMY', '')
-        self.df.loc[self.df['orgname'].str.contains(r'CONSERVATORY'), 'orgtype'] = 'CONSERVATORY'
-        self.df['orgname'] = self.df['orgname'].str.replace('CONSERVATORY', ' ')
-
-        self.df['orgname'] = self.df['orgname'].str.replace(" OF ", " ")
-        self.df['orgname'] = self.df['orgname'].str.replace("OF ", " ")
-        self.df['orgname'] = self.df['orgname'].str.replace(" AND ", " ")
-        self.df['orgname'] = self.df['orgname'].str.replace(" & ", " ")
-        self.df['orgname'] = self.df['orgname'].str.replace(" THE ", " ")
-        self.df['orgname'] = self.df['orgname'].str.replace("THE ", "")
-        self.df['orgname'] = self.df['orgname'].str.replace(".", "")
-        self.df['orgname'] = self.df['orgname'].str.replace(",", "")
-        self.df['orgname'] = self.df['orgname'].str.replace("'", "")
-        self.df['orgtype'] = self.df['orgtype'].replace(np.nan, '')
-
-        self.cleanedname = self.df['orgname'] + ' ' + self.df['orgtype']
-
-        self.df['system'] = system
-'''
-
-
-
 
 
 class Department:
